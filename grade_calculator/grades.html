@@ -5,12 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Grade Calculator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="grades.css">
   </head>
   <body>
     <h1>Grade Calculator</h1>
-    <input type="number" id="grade_field"/>
-    <button id="calculate_button">Calculate!</button>
-	<script src="./grades.js"></script>
+    <div class="arrange-vertically">
+        <div class="arrange-horizontally">
+            <p>Period 1:</p>
+            <input type="number" id="grade_field_1" value="88">
+            <p>, Period 2:</p>
+            <input type="number" id="grade_field_2" value="90"/>
+            <p>, Period 3:</p>
+            <input type="number" id="grade_field_3" value="92"/>
+        </div>
+        <div class="arrange-horizontally">
+            <p>Final Semester:</p>
+            <input type="number" id="grade_field_sem" value="90"/>
+        </div>
+        <div class="arrange-horizontally">
+            <p>Final exam percentage:</p>
+            <input type="number" id="final_percent" value="15"/>
+        </div>
+        <h2>What would I need on the final for a...</h2>
+        <div class="arrange-vertically" id="requirements">
+            <div class="arrange-horizontally">
+                <p1>90? </p1>
+                <p1 class="output" data-grade=".90"></p1>
+            </div>
+            <div class="arrange-horizontally">
+                <p1>89.6? </p1>
+                <p1 class="output" data-grade=".896"></p1>
+            </div>
+            <div class="arrange-horizontally">
+                <p1>80? </p1>
+                <p1 class="output" data-grade=".80"></p1>
+            </div>
+            <div class="arrange-horizontally">
+                <p1>79.6? </p1>
+                <p1 class="output" data-grade=".796"></p1>
+            </div>
+        </div>
+    </div>
+    <script src="./grades.js"></script>
   </body>
 </html>
