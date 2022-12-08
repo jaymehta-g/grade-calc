@@ -30,6 +30,9 @@ grade_fields.forEach(element => {
 });
 
 function onSemesterGradeFieldChanged() {
+    grade_fields.forEach(element => {
+        element.value = (100*getSemesterGrade()).toString()
+    });
     refreshGradesRequired()
 }
 semester_grade_field.onchange = onSemesterGradeFieldChanged
@@ -39,7 +42,8 @@ function getSemesterGrade() {
 }
 
 function onFinalWeightFieldChanged() {
-    final_weight = getNumberValue(final_weight_field.value)*0.01
+    final_weight = getNumberValue(final_weight_field)*0.01
+    refreshGradesRequired()
 }
 final_weight_field.onchange = onFinalWeightFieldChanged
 
